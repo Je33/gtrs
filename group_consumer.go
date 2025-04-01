@@ -388,5 +388,6 @@ func (gc *GroupConsumer[T]) read(fetchIds StreamIDs, stBuf []string) ([]redis.XS
 		Streams:  stBuf,
 		Block:    gc.cfg.Block,
 		Count:    gc.cfg.Count,
+		NoAck:    gc.cfg.NoAck,
 	}).Result()
 }

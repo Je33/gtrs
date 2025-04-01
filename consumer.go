@@ -21,6 +21,7 @@ type StreamConsumerConfig struct {
 	Block      time.Duration // milliseconds to block before timing out. 0 means infinite
 	Count      int64         // maximum number of entries per request. 0 means not limited
 	BufferSize uint          // how many entries to prefetch at most
+	NoAck      bool          // NoAck mode for reading streams
 }
 
 // StreamConsumer is a consumer that reads from one or multiple redis streams.
